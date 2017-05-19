@@ -86,6 +86,8 @@ public class CommunicationThread extends Thread {
                     Document doc = dbBuilder.parse(is);
 
                     NodeList defs = doc.getElementsByTagName(Constants.WORD_DEFINITION);
+
+                    Log.e(Constants.TAG, defs.item(0).toString());
                     serverThread.setData(word, defs.item(0).toString());
 
                 } catch (ParserConfigurationException ex) {

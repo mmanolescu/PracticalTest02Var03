@@ -35,8 +35,9 @@ public class PracticalTest02Var03MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Server port should be filled!", Toast.LENGTH_SHORT).show();
                 return;
             }
-            if (serverThread == null || !serverThread.isAlive()) {
-                Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] There is no server to connect to!", Toast.LENGTH_SHORT).show();
+            serverThread = new ServerThread(Integer.parseInt(serverPort));
+            if (serverThread.getServerSocket() == null) {
+                Log.e(Constants.TAG, "[MAIN ACTIVITY] Could not create server thread!");
                 return;
             }
             serverThread.start();
@@ -54,14 +55,14 @@ public class PracticalTest02Var03MainActivity extends AppCompatActivity {
                     || clientPort == null || clientPort.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Client connection parameters should be filled!", Toast.LENGTH_SHORT).show();
                 return;
-            }
-            if (serverThread == null || !serverThread.isAlive()) {
+                                    }
+                                    if (serverThread == null || !serverThread.isAlive()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] There is no server to connect to!", Toast.LENGTH_SHORT).show();
                 return;
             }
             String data = wordEditText.getText().toString();
 
-            resultTextView.setText(String.Empty);
+            resultTextView.setText("");
 
             clientThread = new ClientThread(clientAddress, Integer.parseInt(clientPort), wordEditText.getText().toString(), resultTextView);
 
