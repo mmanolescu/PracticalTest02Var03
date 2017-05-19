@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_practical_test02_var03_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ro.pub.cs.systems.eim.practicaltest02var03.PracticalTest02Var03MainActivity">
+
+    <TextView
+        android:text="Server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/Server_textView" />
+
+    <TextView
+        android:text="Client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/server_connect_button"
+        android:layout_alignLeft="@+id/Server_textView"
+        android:layout_alignStart="@+id/Server_textView"
+        android:layout_marginTop="32dp"
+        android:id="@+id/client_textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Port"
+        android:ems="10"
+        android:id="@+id/client_port_editText"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/client_textView"
+        android:layout_alignStart="@+id/client_textView" />
+
+    <Button
+        android:text="Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/client_port_editText"
+        android:layout_toRightOf="@+id/client_port_editText"
+        android:layout_toEndOf="@+id/client_port_editText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/client_connect_Button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Word"
+        android:ems="10"
+        android:layout_below="@+id/client_port_editText"
+        android:layout_alignLeft="@+id/client_port_editText"
+        android:layout_alignStart="@+id/client_port_editText"
+        android:layout_marginTop="14dp"
+        android:id="@+id/word_editText" />
+
+    <Button
+        android:text="Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/server_connect_button"
+        android:layout_below="@+id/Server_textView"
+        android:layout_alignLeft="@+id/client_connect_Button"
+        android:layout_alignStart="@+id/client_connect_Button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Address"
+        android:ems="10"
+        android:id="@+id/client_address_editText"
+        android:layout_above="@+id/client_port_editText"
+        android:layout_toLeftOf="@+id/client_connect_Button"
+        android:layout_toStartOf="@+id/client_connect_Button"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Port"
+        android:ems="10"
+        android:id="@+id/server_port_edittext"
+        android:layout_alignTop="@+id/server_connect_button"
+        android:layout_alignLeft="@+id/Server_textView"
+        android:layout_alignStart="@+id/Server_textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/word_editText"
+        android:layout_alignLeft="@+id/word_editText"
+        android:layout_alignStart="@+id/word_editText"
+        android:layout_marginTop="14dp"
+        android:id="@+id/result_textView"
+        android:layout_toLeftOf="@+id/server_connect_button"
+        android:layout_toStartOf="@+id/server_connect_button" />
+</RelativeLayout>
